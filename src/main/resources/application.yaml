@@ -1,0 +1,9 @@
+endpoint:
+  google-books:
+    url: https://www.googleapis.com/books/v1
+    apiKey: AIzaSyBW4bnZFxUbOdjdNXRLZIOF57FRX0vvRcw
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:32768
+    username: postgres
+    password: postgrespw
