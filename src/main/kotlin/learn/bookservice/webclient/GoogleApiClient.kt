@@ -1,16 +1,14 @@
 package learn.bookservice.webclient
 
-import kotlinx.coroutines.reactive.awaitFirstOrNull
 import learn.bookservice.configs.googlebooks.GOOGLE_WEB_CLIENT
 import learn.bookservice.dto.books.BooksResponse
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.beans.factory.annotation.Value
-import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Component
+import org.springframework.web.reactive.function.client.ClientResponse
 import org.springframework.web.reactive.function.client.WebClient
 import reactor.core.publisher.Mono
-import java.util.function.Predicate
 
 @Component
 class GoogleApiClient(
@@ -26,10 +24,12 @@ class GoogleApiClient(
         return googleWebClient.get()
             .uri(path)
             .retrieve()
-            .onStatus(Predicate.isEqual(HttpStatus.INTERNAL_SERVER_ERROR)) { Mono.error(RuntimeException("Encountered an error [${it.statusCode()}]")) }
+            .onStatus({ it.isError }, ::handleError)
             .bodyToMono(BooksResponse::class.java)
             .doOnError {
                 log.error("Error during books call with message: ${it.message}")
             }
     }
+
+    private fun handleError(it: ClientResponse): Mono<Throwable> = Mono.error(RuntimeException("Encountered an error [${it.statusCode()}]"))
 }
