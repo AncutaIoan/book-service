@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono
 @RestController
 class BookController(private val googleService: GoogleService) {
     @GetMapping("/getBooks")
-    suspend fun getBooks(@RequestParam keyword: String = "programming"): Mono<BooksResponse>? {
+    fun getBooks(@RequestParam keyword: String = "programming"): Mono<BooksResponse>? {
         return googleService.getBooks(keyword)
     }
 }
