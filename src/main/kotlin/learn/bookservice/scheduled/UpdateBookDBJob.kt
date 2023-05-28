@@ -1,7 +1,7 @@
 package learn.bookservice.scheduled
 
-import learn.bookservice.dto.books.Item
-import learn.bookservice.repodto.BookEntity
+import learn.bookservice.dto.Item
+import learn.bookservice.entity.BookEntity
 import learn.bookservice.service.BookService
 import learn.bookservice.service.GoogleService
 import org.slf4j.Logger

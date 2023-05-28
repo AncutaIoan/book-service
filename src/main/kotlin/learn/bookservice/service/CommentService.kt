@@ -1,6 +1,6 @@
 package learn.bookservice.service
 
-import learn.bookservice.repodto.CommentEntity
+import learn.bookservice.entity.CommentEntity
 import learn.bookservice.repository.CommentRepository
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux

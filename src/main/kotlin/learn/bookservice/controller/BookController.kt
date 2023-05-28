@@ -1,6 +1,6 @@
 package learn.bookservice.controller
 
-import learn.bookservice.dto.books.BooksResponse
+import learn.bookservice.dto.BooksResponse
 import learn.bookservice.service.GoogleService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam

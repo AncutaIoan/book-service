@@ -1,7 +1,7 @@
 package learn.bookservice.webclient
 
 import learn.bookservice.configs.googlebooks.GOOGLE_WEB_CLIENT
-import learn.bookservice.dto.books.BooksResponse
+import learn.bookservice.dto.BooksResponse
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.beans.factory.annotation.Value

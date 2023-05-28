@@ -1,6 +1,6 @@
 package learn.bookservice.service
 
-import learn.bookservice.repodto.BookEntity
+import learn.bookservice.entity.BookEntity
 import learn.bookservice.repository.BookRepository
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito

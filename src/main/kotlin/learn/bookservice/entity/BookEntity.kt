@@ -1,6 +1,6 @@
-package learn.bookservice.repodto
+package learn.bookservice.entity
 
-import learn.bookservice.dto.books.Item
+import learn.bookservice.dto.Item
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Column
 import org.springframework.data.relational.core.mapping.Table

@@ -1,6 +1,6 @@
 package learn.bookservice.repository
 
-import learn.bookservice.repodto.CommentEntity
+import learn.bookservice.entity.CommentEntity
 import org.springframework.data.r2dbc.repository.Modifying
 import org.springframework.data.r2dbc.repository.Query
 import org.springframework.data.repository.reactive.ReactiveCrudRepository
