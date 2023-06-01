@@ -31,5 +31,5 @@ class GoogleApiClient(
             }
     }
 
-    private fun handleError(it: ClientResponse): Mono<Throwable> = Mono.error(RuntimeException("Encountered an error [${it.statusCode()}]"))
+    private fun handleError(it: ClientResponse): Mono<Throwable> = Mono.error(RuntimeException("Encountered an error with status:  [${it.statusCode()}]"))
 }

@@ -15,7 +15,7 @@ class BookService(private val bookRepository: BookRepository) {
 
     fun getBookFromDB(bookId: Int): Mono<BookEntity> {
         return bookRepository.getBookById(bookId)
-            .doOnError { log.error("Book with id [$bookId] could not be retrieved from db due to {$it}") }
+            .doOnError { log.error("Book with id [$bookId] could not be retrieved from database due to {$it}") }
     }
 
     @Transactional
