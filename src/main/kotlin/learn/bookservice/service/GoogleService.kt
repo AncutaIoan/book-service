@@ -1,6 +1,6 @@
 package learn.bookservice.service
 
-import learn.bookservice.dto.books.BooksResponse
+import learn.bookservice.dto.BooksResponse
 import learn.bookservice.webclient.GoogleApiClient
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono

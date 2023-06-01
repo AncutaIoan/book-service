@@ -1,4 +1,4 @@
-package learn.bookservice.dto.books
+package learn.bookservice.dto
 
 data class Item(
     val id: String,
